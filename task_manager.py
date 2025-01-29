@@ -72,10 +72,8 @@ class TaskManager:
 
         if len(self.ukoly) > 0:
             print("\nSeznam úkolů:")
-            ukol_index = 0
-            for ukol in self.ukoly:
+            for ukol_index, ukol in enumerate(self.ukoly):
                 print(f"{ukol_index + 1}. {ukol['nazev']} - {ukol['popis']}")
-                ukol_index += 1
             print() # prázdný řádek pro lepší čitelnost
         else:
             print(f"\nSeznam úkolů je prázdný\n")
